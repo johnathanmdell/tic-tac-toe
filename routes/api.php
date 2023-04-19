@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\PlayerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('players', [PlayerController::class, 'highScores'])->name('players.high-scores');
+Route::post('players', [PlayerController::class, 'scorePlayer'])->name('player.score-player');

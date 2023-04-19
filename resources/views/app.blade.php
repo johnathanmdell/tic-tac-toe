@@ -10,10 +10,9 @@
 <body>
 <div id="app">
     <div >
-        <tic-tac-toe-component/>
+        <tic-tac-toe/>
     </div>
 </div>
-
 @vite('resources/js/app.js')
 </body>
 </html>
